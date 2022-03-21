@@ -1,9 +1,15 @@
+const express=require('express');
 const mongoose = require('mongoose');
 const router=express.Router();
-
+const {Schema}=mongoose;
 
 
 const NotesSchema = new Schema({
+
+    user:{
+         type:mongoose.Schema.Types.ObjectId,
+         ref:'user'
+    },
 
     title :{
         type: String,
@@ -24,12 +30,12 @@ const NotesSchema = new Schema({
 
     date: {
         type: Date,
-        default: Data.now
+        default: Date.now
     },
 
     timestamp: {
-        type: Data,
-        required: Data.now
+        type: Date,
+        default: Date.now
     }
 });
 
