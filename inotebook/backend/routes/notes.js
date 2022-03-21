@@ -53,4 +53,45 @@ res.json(savedNote)
 
 })
 
+//Route 3: Add a new note using POST: "/api/auth/updatenote".  Login Required
+
+router.put('/updatenote/:id',fetchuser,async(req,res)=>{
+
+    const {title,description,tag}=req.body;
+
+    //create a new note object
+
+    const newnote={};
+  
+    if(title){
+        newnote.title=title
+    }
+
+    if(description){
+        newnote.description=description
+    }
+
+    if(tag){
+        newnote.title=tag
+    }
+
+    // find a note to be update and update it
+
+    let note=await Note.findById(req.params.id);
+
+    if(!note){
+       return res.status(404).send("Not Found");
+    }
+
+    if(!note.user.toString()!==req.user.id){
+        return res.status(401).send("Not allowed")
+    }
+
+     note=await Note.findByIdAndUpdate(req.params.id,{$set:newNote},{new:true})
+
+    res.json({note});
+
+    
+})
+
 module.exports=router
