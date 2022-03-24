@@ -1,14 +1,11 @@
 import React,{useContext} from 'react';
-import noteContext from '../context/notes/noteContext';
-
+import Notes from './Notes';
 export const Home = () => {
 
-  const context=useContext(noteContext);
-  const {notes,setNotes}=context;
 
   return (
 
-    <div>
+    <div class="container">
        <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -53,13 +50,7 @@ export const Home = () => {
 
 </div>
 
-<div className="conatiner my-3">
-  <h2>YOUR NOTES</h2>
-
-  {notes.map((note)=>{
-    return note.title;
-  })}
-</div>
+<Notes />
 </div>
   
   )
