@@ -74,11 +74,17 @@ setNotes(notes.concat(note))
 }
 
 // delete a note
-const deleteNote=()=>{
-    
+const deleteNote=(id)=>{
+    console.log("Deleting " +id);
+   const newNotes=notes.filter((note)=>{return note._id!==id})
+
+setNotes(newNotes);
+   
 }
+   
+
 //edit a note
-const editNote=()=>{
+const editNote=(id,title,description,tag)=>{
     
 }
 
@@ -88,6 +94,6 @@ const editNote=()=>{
            {props.children} 
         </NoteContext.Provider>
     )
-}
+    }
 
 export default NoteState;

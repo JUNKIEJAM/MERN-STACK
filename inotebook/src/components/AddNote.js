@@ -56,7 +56,7 @@ setNote({...note,[e.target.name]: e.target.value})
   </div>
 
 
-  <button type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button>
+  <button type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
 
 </form>
 

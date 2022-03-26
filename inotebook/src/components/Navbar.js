@@ -1,14 +1,10 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import {Link,useLocation} from 'react-router-dom'
 
 
 const Navbar = () => {
 
   let location=useLocation();
-
-  useEffect(()=>{
-    console.log(location.pathname);
-  },[location]);
 
   
     return (
@@ -18,7 +14,7 @@ const Navbar = () => {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
 
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
