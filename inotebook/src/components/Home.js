@@ -5,8 +5,8 @@ export const Home = () => {
 
   return (
 
-    <div class="container">
-       <meta charset="UTF-8" />
+    <div className="container">
+      <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
@@ -14,13 +14,14 @@ export const Home = () => {
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
       <div className="conatiner my-3">
-      <h1>Add a Note</h1>
+  <h1>Add a Note</h1>
+
 
    <form>
 
-     <div class="mb-3">
+     <div className="mb-3">
    
-    <label for="exampleInputEmail1" className="form-label">Email address</label>
+    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
 
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
    
@@ -28,19 +29,19 @@ export const Home = () => {
   
   </div>
  
-  <div class="mb-3">
+  <div className="mb-3">
   
-    <label for="exampleInputPassword1" className="form-label">Password</label>
+    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
     
     <input type="password" className="form-control" id="exampleInputPassword1" />
   
   </div>
 
-  <div class="mb-3 form-check">
+  <div className="mb-3 form-check">
   
     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
   
-    <label className="form-check-label" for="exampleCheck1">Check me out</label>
+    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
  
   </div>
  
